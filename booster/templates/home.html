@@ -1,0 +1,129 @@
+{% extends 'base.html' %}
+{% load socialaccount %}
+{% providers_media_js %}
+
+
+        {% block style%}
+        <style>
+          .cooll{
+            
+            margin: 3px;
+          }
+          .pagination{
+            transform: translateX(+30%);
+            align-items: center;
+          }
+               
+              </style>
+              {% endblock %}
+              
+
+        {% block main %}
+
+       
+       
+        {% if tag %}
+         <h2>Posts tagged with "{{ tag.name }}"</h2>
+        {% endif %}
+        
+        <div class="colo">
+
+                {% for ob in fact %}
+                <hr>
+                <div class="card m-3" style="width: 90%;">
+                       
+                  <a href="{{ob.get_absolute_url }}" class="btn btn-light "><img src="{{ ob.image.url  }}" class="card-img-top" alt="jjj"></a>
+                        <div class="card-body">
+                              
+                          <a href="{{ob.get_absolute_url }}" class="btn btn-light "><h5 class="card-title">{{ob.title}}</h5></a>
+                         
+
+                         
+                                <p class="card-text">{{ob.body|truncatechars:100}}</p>
+                                <a href="{{ob.get_absolute_url }}" class="btn btn-light ">Read more</a>
+                                
+                        </div>
+                </div>
+              {%endfor%}
+
+              
+        </div>
+        
+    
+
+                       
+        {% if fact.has_other_pages %}
+        <ul class="pagination">
+          {% if fact.has_previous %}
+            <li class="cooll"><a href="?page={{ fact.previous_page_number }}">privious</a></li>
+          {% else %}
+            <li class="disabled cooll"><span>&laquo;</span></li>
+          {% endif %}
+          {% for i in fact.paginator.page_range %}
+            {% if fact.number == i %}
+              <li class="active cooll"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
+            {% else %}
+              <li class= "cooll"><a href="?page={{ i }}">{{ i }}</a></li>
+            {% endif %}
+          {% endfor %}
+          {% if fact.has_next %}
+            <li class= "cooll"><a href="?page={{ fact.next_page_number }}">Next</a> </li>
+          {% else %}
+            <li class="disabled cooll"><span>&raquo;</span></li>
+          {% endif %}
+        </ul>
+        {% endif %}             
+                      
+                       
+
+      
+
+
+
+       
+            
+             
+        {% endblock main %}
+{% block recent %}
+
+<div class="container">
+  {% for ob in fact %}
+<a href="/article/{{ob.slug}}" class="m-2">{{ob.topic}}</a><br>
+{%endfor%}
+</div>
+
+{% endblock recent %}
+
+
+
+                       {% block share %}
+                      
+                                           
+
+                          <a href="https://www.facebook.com/sharer/sharer.php?u=http://127.0.0.1:8000/add/{{objs.slug}}/"  class="fa fa-facebook"></a>
+                          <a href="{% provider_login_url "facebook" method="oauth2" %}" class="fa fa-twitter"></a>
+                          <a href="{% provider_login_url "google" %}" class="fa fa-linkedin"></a>
+                          <a href="#" class="fa fa-instagram"></a>
+                      {% endblock share %}
+
+
+
+
+                        {% block signup %}
+                         <form action="/suscriber" method="POST">
+                                {% csrf_token%}
+                                <h2>Let Suscribe!!</h2>
+                                <div class="input-container">
+                                  <i class="fa kalu11 fa-envelope icon"></i>
+                                  <input class="input-field" type="text" required placeholder="Email" name="emaiil">
+
+                                </div>
+                                <div class="input-container">
+                                  <i class="fa  kalu11 fa-user icon"></i>
+                                  <input class="input-field" type="text"  required placeholder="Name" name="namei" >
+
+                                </div>
+                                
+                                <button type="submit" class="btn1">Register</button>
+                              </form>
+                        {% endblock signup %}

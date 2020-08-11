@@ -1,0 +1,456 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+  
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Hello, world!</title>
+
+   {% block style%}
+   {% endblock %}
+   <style>
+    .v{
+      border-right: 1px solid black;
+      height: 500px;
+    }
+    p{
+        
+      font-family: none;
+  font-size: inherit;
+  color: black;
+  font-weight: 500;
+}
+    
+
+h1{
+color: darkgreen;
+font-size: x-large;
+font-family: revert;
+}
+   
+.input-container {
+display: -ms-flexbox; /* IE10 */
+display: flex;
+width: 100%;
+margin-bottom: 15px;
+}
+
+.icon {
+padding: 10px;
+background: dodgerblue;
+color: white;
+min-width: 50px;
+text-align: center;
+}
+.okk{
+transform: translateX(+70%);
+}
+.input-field {
+width: 100%;
+padding: 10px;
+outline: auto;
+}
+
+.input-field:focus {
+border: 2px solid green;
+}
+
+/* Set a style for the submit button */
+.btn1 {
+background-color: crimson;
+color: white;
+padding: 15px 20px;
+border: none;
+cursor: pointer;
+width: 100%;
+opacity: 0.9;
+}
+
+.btn1:hover {
+opacity: 1;
+}
+
+.item{
+align-items: right;
+}
+.card{
+width: 103%;
+
+}
+.btn{
+color: blue;
+}
+span{
+color:crimson
+}
+.o{
+color: blueviolet;
+}
+.fa {
+padding: 10px;
+font-size: 30px;
+min-width: 50px;
+text-align: center;
+text-decoration: none;
+
+
+color: white;
+}
+.kalu11{
+background-color: black;
+}
+.fa-facebook {
+background: #3B5998;
+color: white;
+border-radius: 10px;
+}
+
+.fa-twitter {
+background: #55ACEE;
+color: white;
+border-radius: 20px;
+}
+.fa-linkedin {
+background: #007bb5;
+color: white;
+border-radius: 20px;
+}
+.fa-instagram {
+background: crimson;
+color: white;
+border-radius: 20px;
+}
+.okay{
+padding: 10px;
+font-size: 30px;
+min-width: 50px;
+text-align: center;
+text-decoration: none;
+border-radius: 20px solid black;
+color: crimson;
+
+
+
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+.hide{
+display: none;
+}
+p{
+font-family:auto;
+  font-size: larger;
+}
+
+.km{
+font-family: auto;
+color: aliceblue;
+font-size: xx-large;
+margin: 10px;
+margin: 10px;
+    padding: 5px;
+    text-align: center;
+
+
+}
+.bg1{
+background-color: black;
+}
+.kl{
+  color: aqua;
+  transform: translate( -50px ,-15px);
+  text-align: center;
+
+
+}
+.kal{
+color: black ;
+background-color: transparent;
+font-size: small;
+
+}
+.post-f-t{
+transform: translateY(-50px);
+}
+.mh{
+background-color: black;
+height: 100px;
+
+}
+
+
+   </style>
+  </head>
+  <body>
+    {% load humanize %} 
+    {% load extras %}
+    <header>
+      <nav class="navbar navbar-expand-md navbar-light bg-white absolute-top">
+        <div class="container">
+  
+          <button class="navbar-toggler order-2 order-md-1" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbar-left navbar-right" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+  
+          <div class="collapse navbar-collapse order-3 order-md-2" id="navbar-left">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item dropdown">
+                <a class="nav-link " href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Home</a>
+               
+              </li>
+              
+              
+            </ul>
+          </div>
+  
+          <a class="navbar-brand mx-auto order-1 order-md-3" href="/">Knowledge Booster</a>
+  
+          <div class="collapse navbar-collapse order-4 order-md-4" id="navbar-right">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="/about">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/contact">Contact</a>
+              </li>
+            </ul>
+          </ul>
+          
+                               <form class="form-inline" action="/search" >
+                                <input class="search js-search form-control form-control-rounded mr-sm-2" type="text"  required id="id_query" name="query" title="Enter search query here.." placeholder="Search.." aria-label="Search">
+                              </form>
+           
+          </div>
+        </div>
+      </nav>
+    </header>
+
+          {% if messages %}
+          {% for message in messages %}
+          <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <strong>{{message}}</strong>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          {% endfor %}
+          {% endif %} 
+
+          <hr>
+
+
+
+<!---------------------------main content sec-1---------------------------->
+
+
+
+
+
+
+
+    <div class="container">  
+         <div class="row">
+               
+                <div class="col-lg-7">
+                  <!--main 1st part-->
+                  
+                    
+                      <!-- Breadcrumbs -->
+                     
+                       {% block strip %}
+                       {% endblock %}
+                     
+                      
+                    
+                  
+                  {% block main%}
+
+                          {% endblock%}
+                </div>
+                <!--main 2nd part-->
+                <div class="col-lg-4">
+
+                  
+
+
+  
+
+  <aside class="sidebar sidebar-sticky">
+    
+    
+    <!-- /.card -->
+    {% block popular %}
+    {% endblock %}
+    
+   
+    {% block recentpost %}
+    {% endblock %}
+
+
+    
+
+
+
+
+  </aside>
+  <aside class="sidebar">
+    
+
+
+    <div class="card mb-4">
+      <div class="card-body">
+        <h4 class="card-title">About</h4>
+        <p class="card-text">Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam <a href="#">semper libero</a>, sit amet adipiscing sem neque sed ipsum. </p>
+      </div>
+    </div><!-- /.card -->
+  </aside>
+
+  {% block signup%}
+    {% endblock%}
+
+
+
+                 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                  
+                        
+                        
+                        
+                        
+                       
+
+                       
+                            
+
+                </div><!--main2-->
+       </div><!--row-->
+
+              
+    </div><!--container-->
+
+
+   
+
+  <div class="container">
+    <hr>
+    <div class="row no-gutters">
+      <div class="col-sm-6">
+        <div class="row no-gutters">
+          <div class="col-3">
+            <a class="photo" href="#">
+              <img 100px src="{% static 'images/b1.png' %}" alt="" height="100px" width="100%" />
+            </a>
+          </div>
+          <div class="col-3">
+            <a class="photo" href="#">
+              <img 100px src="{% static 'images/b2.jpg' %}" alt="" height="100px"  width="100%" />
+            </a>
+          </div>
+          <div class="col-3">
+            <a class="photo" href="#">
+              <img 100px src="{% static 'images/b3.jpeg' %}" alt="" height="100px" width="100%"  />
+            </a>
+          </div>
+          <div class="col-3">
+            <a class="photo" href="#">
+              <img 100px src="{% static 'images/b4.jpeg' %}" alt="" height="100px" width="100%"  />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="row no-gutters">
+          <div class="col-3">
+            <a class="photo" href="#">
+              <img 100px src="{% static 'images/b5.jpeg' %}" alt=""height="100px" width="100%"  />
+            </a>
+          </div>
+          <div class="col-3">
+            <a class="photo" href="#">
+              <img 100px src="{% static 'images/b6.jpeg' %}" alt="" height="100px" width="100%"  />
+            </a>
+          </div>
+          <div class="col-3">
+            <a class="photo" href="#">
+              <img 100px src="{% static 'images/b7.jpeg' %}" alt="" height="100px" width="100%" />
+            </a>
+          </div>
+          <div class="col-3">
+            <a class="photo" href="#">
+              <img 100px src="{% static 'images/b8.jpeg' %}" alt="" height="100px" width="100%" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <footer class="site-footer bg-darkest">
+    <div class="container">
+
+      <ul class="nav justify-content-center">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Privacy policy</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Terms</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/contact">Feedback</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/advertise">Advertise</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/contact">Contact</a>
+        </li>
+      </ul>
+      <div class="copy">
+        &copy; Knowledge booster 2019<br />
+        All rights reserved
+      </div>
+    </div>
+  </footer>
+                      
+
+         
+
+        {% block script %}
+        {% endblock %}
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>

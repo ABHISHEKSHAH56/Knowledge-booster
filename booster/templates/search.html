@@ -1,0 +1,109 @@
+{% extends 'base.html' %}
+{% load socialaccount %}
+{% providers_media_js %}
+
+
+        {% block style%}
+        <style>
+          .cooll{
+            
+            margin: 3px;
+          }
+          
+          .pagination{
+            transform: translateX(+30%);
+            align-items: center;
+          }
+               
+              </style>
+              {% endblock %}
+              {% block strip %}
+              <section class="hero py-6">
+                <ol class="breadcrumb pl-0 ">
+                  <li class="breadcrumb-item  "><a href="/">Home</a></li>
+              
+              <li class="breadcrumb-item active ">search</li>
+              
+                            
+                              </ol>
+                            </section>
+              
+              
+              {% endblock %}
+
+        {% block main %}
+        <hr>
+
+
+     <h3> Post containing "{{ query }}"</h3>
+
+        {% for post in results %}
+       
+       <hr>
+        <div class="card mb-3" style="max-width: 540px;">
+          <div class="row no-gutters">
+            <div class="col-md-4">
+              <a href="{{ post.get_absolute_url }}"><img src="{{ post.image.url }}" class="card-img" alt="" height="100%"></a>
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title"><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h5>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <h4></h4>
+
+
+ 
+ {% empty %}
+ 
+ <p>There are no results for your query.</p>
+ {% endfor %}
+ 
+
+   {% endblock main %}
+{% block recent %}
+
+
+
+{% endblock recent %}
+
+
+
+                       {% block share %}
+                       <form action="/search">
+                        {{form.query}}
+                        <button class="btn btn-sm btn-warning" type="submit"> submit</button>
+                      </form>
+                      <hr>
+
+                          <a href="https://www.facebook.com/sharer/sharer.php?u=http://127.0.0.1:8000/add/{{objs.slug}}/"  class="fa fa-facebook"></a>
+                          <a href="{% provider_login_url "facebook" method="oauth2" %}" class="fa fa-twitter"></a>
+                          <a href="{% provider_login_url "google" %}" class="fa fa-linkedin"></a>
+                          <a href="#" class="fa fa-instagram"></a>
+                      {% endblock share %}
+
+
+
+
+                        {% block signup %}<form action="/suscriber" method="POST">
+                                {% csrf_token%}
+                                <h2>Let Suscribe!!</h2>
+                                <div class="input-container">
+                                  <i class="fa kalu11 fa-envelope icon"></i>
+                                  <input class="input-field" type="text" placeholder="Email" name="emaiil">
+
+                                </div>
+                                <div class="input-container">
+                                  <i class="fa  kalu11 fa-user icon"></i>
+                                  <input class="input-field" type="text" placeholder="Name" name="namei" >
+
+                                </div>
+                                
+                                <button type="submit" class="btn1">Register</button>
+                              </form>
+                         
+                              
+                        {% endblock signup %}

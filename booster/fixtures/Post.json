@@ -1,0 +1,266 @@
+[
+{
+  "model": "booster.post",
+  "pk": 1,
+  "fields": {
+    "title": "programing in c & c++",
+    "slug": "programing-c-c",
+    "author": 1,
+    "body": "sfdxgchjkl",
+    "image": "0",
+    "publish": "2020-07-24T13:56:50Z",
+    "created": "2020-07-24T13:57:21.922Z",
+    "updated": "2020-07-24T13:57:21.922Z",
+    "status": "draft"
+  }
+},
+{
+  "model": "booster.post",
+  "pk": 2,
+  "fields": {
+    "title": "As Covid-19 cases spike in Delhi, Amit Shah to meet Arvind Kejriwal today",
+    "slug": "covid-19-cases-spike-delhi-amit-shah-meet-arvind-kejriwal-today",
+    "author": 3,
+    "body": "vbvbvbvbbvbvbvbvbbvbvv title = models.CharField(max_length=250)\r\n        slug = models.SlugField(max_length=250,unique_for_date='publish')\r\n        author = models.ForeignKey(User, on_delete=models.CASCADE,  related_name='blog_posts')\r\n        body = models.TextField()\r\n        image=models.ImageField( upload_to=None, height_field=None, width_field=None, max_length=None)\r\n        publish = models.DateTimeField(default=timezone.now)\r\n        created = models.DateTimeField(auto",
+    "image": "image/WhatsApp_Image_2020-03-23_at_18.03.29.jpeg",
+    "publish": "2020-07-25T05:08:24Z",
+    "created": "2020-07-25T05:09:25.756Z",
+    "updated": "2020-07-25T13:23:30.848Z",
+    "status": "draft"
+  }
+},
+{
+  "model": "booster.blogdes",
+  "pk": 1,
+  "fields": {
+    "post": 2,
+    "sub_title": "fdtfuydfyusfyus",
+    "description": "syfsayduifiusF",
+    "image": "image/WhatsApp_Image_2020-04-04_at_23.11.14.jpeg"
+  }
+},
+{
+  "model": "booster.blogdes",
+  "pk": 2,
+  "fields": {
+    "post": 2,
+    "sub_title": "VBCBggffghhhd hffuf",
+    "description": "sfyfuyfyf fiufuif sfiufufs",
+    "image": "image/WhatsApp_Image_2020-03-24_at_19.27.55.jpeg"
+  }
+},
+{
+  "model": "booster.suscribe",
+  "pk": 1,
+  "fields": {
+    "Email": "ak28685@gmail.com",
+    "Name": "abhishek"
+  }
+},
+{
+  "model": "booster.suscribe",
+  "pk": 2,
+  "fields": {
+    "Email": "ak8756111@gmail.com",
+    "Name": "abhikar4605"
+  }
+},
+{
+  "model": "booster.suscribe",
+  "pk": 3,
+  "fields": {
+    "Email": "ak8756111@gmail.com",
+    "Name": "abhikar4605"
+  }
+},
+{
+  "model": "booster.suscribe",
+  "pk": 4,
+  "fields": {
+    "Email": "abhi1@gham.com",
+    "Name": "Abhishek shah "
+  }
+},
+{
+  "model": "booster.suscribe",
+  "pk": 5,
+  "fields": {
+    "Email": "ak8756110@gmail.com",
+    "Name": "abhikar4605"
+  }
+},
+{
+  "model": "booster.suscribe",
+  "pk": 6,
+  "fields": {
+    "Email": "abhi1@gham.com",
+    "Name": "abhikar4605"
+  }
+},
+{
+  "model": "booster.suscribe",
+  "pk": 7,
+  "fields": {
+    "Email": "ak28685@gmail.com",
+    "Name": "Abhishek shah "
+  }
+},
+{
+  "model": "booster.suscribe",
+  "pk": 8,
+  "fields": {
+    "Email": "ak8756111@gmail.com",
+    "Name": "vvvvvvvvvvvvvvvvvvvvvvvvvvv"
+  }
+},
+{
+  "model": "booster.suscribe",
+  "pk": 9,
+  "fields": {
+    "Email": "431_bt19@iiitkalyani.ac.in",
+    "Name": "cool"
+  }
+},
+{
+  "model": "booster.suscribe",
+  "pk": 10,
+  "fields": {
+    "Email": "431_bt19@iiitkalyani.ac.in",
+    "Name": "Abhishek shah "
+  }
+},
+{
+  "model": "booster.suscribe",
+  "pk": 11,
+  "fields": {
+    "Email": "ak8756111@gmail.com",
+    "Name": "vegetable"
+  }
+},
+{
+  "model": "booster.blog",
+  "pk": 1,
+  "fields": {
+    "postID": "abhi1",
+    "Type": "poltics",
+    "topic": "How India Will Defate The Corona Virus",
+    "blog": "assssssssssssssssssssssssssssssssssssssssssssss  assssssssssssssssssssssssssssssssssssssssss aaaCoronavirus - Bengal Admits To Faults In COVID-19 Data, Will Not Count Linked Deaths\r\n11 COVID-19 patients have died in the last 24 hours raising the total to 61 in West Bengal.\r\n\r\n\r\n\r\n\r\nKolkata: In a first, the West Bengal government on Monday admitted that its system of collating data about COVID-19 cases and deaths was not perfect and that some numbers had slipped through the cracks. But the Chief Secretary Rajiva Sinha steadfastly refused to include in the state's cumulative COVID-19 death count the 72 coronavirus patients labelled by the controversial audit committee as co-morbidity deaths which are linked to COVID-19 but believed to have been caused by pre-existing conditions.\r\nEleven COVID-19 patients have died in the last 24 hours, the chief secretary said, raising the government death count to 61. This includes 33 coronavirus cases confirmed by the audit committee. If 72 co-morbidity deaths are added, the tally shoots up to 133 but the state is not adding the co-morbidity fatalities.\r\n\r\nOn April 24, Mr Sinha had said the death audit committee had examined the deaths of 105 COVID-19 patients ever since it was set up on April 3. Of 105, COVID-19 was the cause of death of 33 patients. The rest of the 72 deaths were caused by co-morbidties and COVID-19 was only an \"incidental\" finding.\r\n\r\nAsked about the two sets of figures, Mr Sinha said, \"We were not giving two deaths figures. We were giving one death figure that is death due to COVID as given to us by the audit committee.\"\r\n\r\nAddressing the media, Mr Sinha added, \"We are quoting the right figure before you. (The 72) co-morbidity deaths no more will come to us because hospitals have been told not to report comorbidity deaths... So they are reporting the death figures and we are quoting the death figures. Where is the issue?\"\r\n\r\nSo, from now on, hospitals will not report the death of COVID-19 positive patients who may have died due to pre-existing, underlying diseases.\r\n\r\nRajiva Sinha on Monday began his press meet on an introspective note. \"We have not given figures for the last three days because our reporting structure was very complicated. The cases that came up after we had put out a bulletin were sometimes not recorded even. It was not intentional.\"\r\n\r\n\"The arrangement we had started, we thought it was fool proof but all arrangements should be dynamic and improved by our learning,\" he said, adding. \"We have now tried to ensure no figures were lost in the cracks.\"",
+    "slug": "ahahhahahahah",
+    "image": "photo-1462536943532-57a629f6cc60_C4eK4zU.jpeg",
+    "h2": "",
+    "p2": "",
+    "image2": "",
+    "h3": "",
+    "p3": "",
+    "image3": "",
+    "h4": "",
+    "p4": "",
+    "image4": "",
+    "created": "2020-05-04T22:51:14.624Z"
+  }
+},
+{
+  "model": "booster.blog",
+  "pk": 2,
+  "fields": {
+    "postID": "Abhi14",
+    "Type": "exam",
+    "topic": "How India Will Defate The Corona Virus",
+    "blog": "aaaaaaaf       aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa                    rrrrrrrrrrrrrrrrrrrrrrrrrrr               rrrrrrrrrrrrrrwwwwwwwwwwwwwwwwwwwf fffffffff                    ",
+    "slug": "Howcanghgghsfgyfyygydgsaft",
+    "image": "photo-1564329200029-9a8fc635163f.jpeg",
+    "h2": "",
+    "p2": "",
+    "image2": "",
+    "h3": "",
+    "p3": "",
+    "image3": "",
+    "h4": "",
+    "p4": "",
+    "image4": "",
+    "created": "2020-05-04T23:01:45.533Z"
+  }
+},
+{
+  "model": "booster.blog",
+  "pk": 3,
+  "fields": {
+    "postID": "WP1",
+    "Type": "world",
+    "topic": "How election process  in USA??",
+    "blog": "In USA having a parliament(congress)  which have two house one of the senates (Upper house) & other one House of Representative (Lower House)<br>\r\nIn congress there are 535 member which is elected by directly & indirectly , for winning the election of president  required an absolute majority of at least 270+ seat. Presidential election held in every four year & only two-time particular president can serve the nation \r\nIn house of representative have 435  voting member  this seat is decide on the basis of population   & senate have 100 seat each state have 2 seats\r\n In USA there is  multi party system but only two party emerge as a national party one of the democrats & another one Republicans\r\n Republicans party believe in liberalism, opposed the expansion of slavery, and supported economic reform.  & democrats believe in emphasizes egalitarianism, social equality, protecting the environment, and strengthening the social safety net through liberalism.",
+    "slug": "Howelectionprocesshappensinusa",
+    "image": "photo-1557160854-e1e89fdd3286.jfif",
+    "h2": "How  party  select their presidential nominee??",
+    "p2": "For  selecting presidential and congressional district (parliamentary) nominee each party takk election firstly a congressional district nominee is elected then they select the presidential nominee\r\nFor selecting the congressman district each party conduct the  election authorized by local government  &  its two type  state primaries and caucuses  both  run differently  but both serve as same purpose after the selecting the congressman district nominee.\r\n Party conduct the national nominee after that a presidential nominee is elected   ,  nominee chose the vice president candidate   Both party presidential campaign for favor  their congressional candidate , they debate, organize really digitally Intract with people share about their future plan",
+    "image2": "party.jfif",
+    "h3": "General Election",
+    "p3": "Generally  general election held in 3 November, people   in every state across the country cast the vote for one president & other one vice president , when people cast their vote , they actually  vote for electoral(congressman)\r\n In December  election held for 100 seat of senate  each state legislative member selects the state representative (senate member )   & whoever nominee get the seat  of 270+  they elected as a president of United States of America",
+    "image3": "images.jfif",
+    "h4": "Intresting Fact in election result !!",
+    "p4": "In USA if one of the  party presidential  nominee get more than % of vote then another but they can\u2019t we win Because if one of the  parties get seat in  state more than half of total seat , count as party win the total seat in that state i.e. In California  if democratic party win 28 seats but it\u2019s counts as 53 seat wins",
+    "image4": "",
+    "created": "2020-05-09T07:20:44.406Z"
+  }
+},
+{
+  "model": "booster.comment",
+  "pk": 1,
+  "fields": {
+    "name": "",
+    "email": "",
+    "post": 1,
+    "com": "sai khe rha hai bhai tu kiya likhtha hai",
+    "Date": "2020-05-04T22:58:52.846Z",
+    "parent": null
+  }
+},
+{
+  "model": "booster.comment",
+  "pk": 2,
+  "fields": {
+    "name": "Abhishek shah",
+    "email": "akshatavi464@gmail.com",
+    "post": 2,
+    "com": "ramu",
+    "Date": "2020-05-04T23:09:25.354Z",
+    "parent": null
+  }
+},
+{
+  "model": "booster.comment",
+  "pk": 3,
+  "fields": {
+    "name": "",
+    "email": "",
+    "post": 1,
+    "com": "mst bhai",
+    "Date": "2020-05-04T23:16:34.464Z",
+    "parent": null
+  }
+},
+{
+  "model": "booster.comment",
+  "pk": 4,
+  "fields": {
+    "name": "abhishek",
+    "email": "ak8756110@gmail.com",
+    "post": 1,
+    "com": "abhishek hai",
+    "Date": "2020-05-04T23:20:14.448Z",
+    "parent": null
+  }
+},
+{
+  "model": "booster.comment",
+  "pk": 5,
+  "fields": {
+    "name": "Abhishek shah ",
+    "email": "ak8756111@gmail.com",
+    "post": 1,
+    "com": "abhishek hai",
+    "Date": "2020-05-05T00:11:09.093Z",
+    "parent": null
+  }
+}
+]
